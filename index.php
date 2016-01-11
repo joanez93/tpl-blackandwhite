@@ -6,12 +6,17 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 		<!-- Dados do post -->
 		<article class="post">
-			<h2><a href="<?php the_permalink() ?>"><?php the_title()?></a></h2>
+			<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title()?></a></h2>
+			<div>
+				<?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail();
+				} //Mostra a imagem no post ?>
+				<p><?php the_content(); //Conteúdo do post ?></p>
+			</div>
 			<div class="description">
 				<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
 				<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>
-				<span><?php edit_post_link(('Editar')); ?></span>
-				<p><?php the_content(); ?></p>
+				<span><?php edit_post_link(('Editar')); ?></span>	
 			</div>
 
 			<?php endwhile ?>

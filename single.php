@@ -6,7 +6,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
 		<!-- Dados do post -->
 		<article class="post">
-			<h1><a href="<?php the_permalink() ?>"><?php the_title()?></a></h1>
+			<h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title()?></a></h1>
 			<div class="description">
 				<span>Postado por: <?php the_author() ?> em <?php the_time('d/M/Y') ?></span>
 				<span><?php comments_popup_link('Sem comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?></span>

@@ -1,7 +1,13 @@
 /*Ficheiro onde fica o stylesheet do tema*/
 
+/*--- Fontes ---*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:900); /*Titulos*/
+@import url(https://fonts.googleapis.com/css?family=Cantarell:700); /*Paragrafos*/
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:700); /*Menu*/
+
 /* Import */
-@import url(/css/reset.css);
+@import url(http://localhost/mauricio/wp-content/themes/blackandwhite/css/reset.css);
+@import url(http://localhost/mauricio/wp-content/themes/blackandwhite/css/grids/grid-izzy.css);
 
 /*-- Import icomoon --*/
 @font-face {
@@ -18,28 +24,29 @@
 .ico-menu:before{ content: '\e6b8'; font-size: 2em; padding: .5em; color: #F2F2F2;}
 .ico-cross:before{ content: '\e8bb'; font-size: 2em; padding: .5em; color: #F2F2F2;}
 
-/*--- Fontes ---*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Titulos*/
-@import url(https://fonts.googleapis.com/css?family=Cantarell:700); /*Paragrafos*/
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:700); /*Menu*/
+
 
 /*--- Definições Globais ---*/
-h1, h2, h3, h4, h5, h6, p, span, blockquote, input, textarea{
-	font-family: 'Montserrat', 'icomoon', sans-serif;
+html, body {
+	margin: 0;
 }
-ol, ul, li, a, i{
+h1, h2, h3, h4, h5, h6, p, span, blockquote, input, textarea{
+	font-family: 'Raleway', 'icomoon', sans-serif;
+}
+ol, ul, li, a, i, button{
 	font-family: 'Titillium', 'icomoon', sans-serif;
 } 
+i{ font-style: normal;}
+a{ text-decoration: none;}
+
 
 .page-title{
-	font-size: 6em;
 	color: #E2E2E2;
 	padding: .5em;
 	text-align: center;
 }
 
 .page-subtitle{
-	font-size: 4.5em;
 	color: #F2F2F2;
 	padding-top: .2em;
 	text-align: center;
@@ -50,38 +57,116 @@ ol, ul, li, a, i{
 }
 @media(min-width: 1200px){
 	/*--- Definições de font-size ---*/
-	ul, li, ol, i{ font-size: 1.5em; }
-	p{ font-size: 1.3em; }
-	span{ font-size: 1em;}
+	/*ul, li, ol, i, a{ font-size: 1.5em; }*/
+	h1{ font-size: 6em; margin: 0;}
+	h2{ font-size: 4.5em; margin: 0;}
+	h3{ font-size: 3.5em; margin: 0;}
+	h4{ font-size: 3em; margin: 0;}
+	p{ font-size: 1.3em; margin: 0; }
+	span{ font-size: 1em; margin: 0;}
 
 
+	/*--- Botões ---*/
+	.btn-main{
+		width: 20%;
+		padding: .5em;
+		margin-top: 1%;
+		font-size: 1.5em;
+		position: relative;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+	
+	.btn-share{
+		background: rgba(255, 255, 255, .2);
+		border: 2px solid rgba(255, 255, 255, .5);
+		color: #fff;
+		left: 40%;
+		transition: .5s ease-out;
+	}
+	.btn-share:hover{
+		background: rgba(0, 0, 0, .5);
+		border: 2px solid rgba(255, 255, 255, .8);
+		color: rgba(255, 255, 255, .5);
+	}
 
 	header{
+		background: rgba(25, 19, 124, .3);
 		width: 100%;
 		height: 100vh;
+		border-bottom: 4px solid rgba(72, 140, 126, .7);
+		-webkit-filter: sepia(100%);
+		filter: sepia(100%);
 	}
-	header i#menu-top{
+	header i#get-menu{
 		padding: .5em;
 		position: absolute;
 		top: 2%;
 		right: 2%;
+		cursor: pointer;
 	}
+	/*--- Menu ---*/
 	header nav.main-menu {
+		background: rgba(255, 255, 255, .7);
+		width: 20%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -20%;
+		z-index: 9;
+		transition: .5s gradient-linear;
+	}
+	ul.menu{
 		width: 100%;
-		height: 20%;
-		display: none;
+		height: 100%;
+		margin-top: 20%;
+		margin-left: 5%;
+	}
+	.menu-item{
+		font-size: 2em;
 	}
 
 	header div.bg-video{
 		width: 100%;
 		height: 100%;
-		position: absolute;
+		position: fixed;
 		overflow: hidden;
-		border-bottom: 4px solid rgba(72, 140, 126, .7);
 		z-index: -1;
 	}
 	header div.bg-video video{
 		width: 100%;
 	}
 
+	header div.logo-header{
+		width: 300px;
+		height: auto;
+		position: relative;
+		top: 2%;
+		left: 40%;
+		z-index: 9;
+	}
+	header div.logo-header img{
+		width: 100%;
+	}
+
+	/*--- texto header ---*/
+	header div.apr-text{
+		width: 100%;
+		height: auto;
+		margin-top: 5%;
+	}
+	/*--- Post Section ---*/
+	header div.posts-section{
+		background: #F2F2F2;
+		width: 100%;
+		height: 30%;
+		position: absolute;
+		bottom: 0;
+	}
+
+
+	/*------- Main -------*/
+	main{
+		background: black;
+	}
 }

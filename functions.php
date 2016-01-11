@@ -11,3 +11,17 @@ if (function_exists('register_sidebar')) {
 		));
 	}
 ?>
+
+
+<!-- Funções nos posts -->
+<?php 
+	// add post-formats to post_type 'page'
+	add_post_type_support( 'page', 'post-formats' );
+	add_theme_support( $feature, $arguments );
+	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	add_post_type_support( 'page', 'excerpt' ); // Suport para trechos
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array( 'post' ) );          // Posts only
+	add_theme_support( 'post-thumbnails', array( 'page' ) );          // Pages only
+	add_theme_support( 'post-thumbnails', array( 'post', 'movie' ) ); // Posts and Movies
+?>

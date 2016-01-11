@@ -16,8 +16,11 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url') ?>" />
 	<link rel="stylesheet" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://izzyweb.com.br/wp/mauricio/xmlrpc.php?rsd">
+
 	<!-- Javascripts -->
-	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src="http://localhost/mauricio/wp-content/themes/blackandwhite/js/jquery/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="http://localhost/mauricio/wp-content/themes/blackandwhite/js/events.js"></script>
 
 
 	<title><?php bloginfo('name'); ?></title>
@@ -26,24 +29,32 @@
 </head>
 <body>
 	<header>
+		<!-- Background -->
 		<div class="bg-video">
-			<video autoplay loop no-controls>
-				<source src="http://izzyweb.com.br/public/videos/people-bg.mp4" type="video/mp4">
-				<source src="http://izzyweb.com.br/public/videos/people-bg.webm" type="video/webm"> 
+			<video autoplay loop muted>
+				<source src="http://izzyweb.com.br/public/videos/chaplin/The Vagabond (1916) - Charlie Chaplin (HD).mp4" type="video/mp4">
+				<source src="http://izzyweb.com.br/public/videos/chaplin/The Vagabond (1916) - Charlie Chaplin (HD).webm" type="video/webm"> 
 			</video>
 		</div>
-		<div class="">
-			
-		</div>
-		<i id="menu-top" class="ico-menu"></i>
-		<h1 class="title"><?php bloginfo('name') ?><a href="<?php bloginfo('url'); ?>"></a></h1>
-		<h2 class="subtitle"><?php bloginfo('description') ?></h2>
 
+		<!-- Botão de chamada -->
+		<i class="ico-menu"></i>
+		<button  id="get-menu">Clique aqui</button>
+		<div class="logo-header">
+			<img src="http://localhost/mauricio/wp-content/themes/blackandwhite/img/logo.png" alt="Logo: Em Preto e Branco" title="Em Preto e Branco">	
+		</div>
+		<div class="apr-text">
+			<h4 class="page-subtitle"><?php bloginfo('description') ?></h4>
+			<button class="btn-main btn-share" title="Envie sua história" alt="Botão: Envie sua história">Minha história</button>
+		</div>
+			
+	
+		
+		<!-- Menu -->
 		<nav class="main-menu">
-			<ul>
 				<?php wp_nav_menu(); ?>
-			</ul>
 		</nav>
-		<!-- <input class="search-top" placeholder="O que você procura?" <?php the_search_query(); ?> /> 
-		<button type="submit">Procurar</button>-->
+		<div class="posts-section">
+			<?php the_content( $more_link_text, $stripteaser ); ?>
+		</div>
 	</header>
