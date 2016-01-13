@@ -20,11 +20,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+/*Definição dos icones*/
+.ico-menu:before{ content: '\e6b8'; font-size: 4em; padding: .5em; color: #F2F2F2; cursor: pointer;}
+.ico-cross:before{ content: '\e8bb'; font-size: 4em; padding: .5em; color: #FF3838; cursor: pointer;}
 
-.ico-menu:before{ content: '\e6b8'; font-size: 2em; padding: .5em; color: #F2F2F2;}
-.ico-cross:before{ content: '\e8bb'; font-size: 2em; padding: .5em; color: #F2F2F2;}
-
-
+/*-- Social Networks icons*/
+.ico-facebook:before{ content: '\e939'; font-size: 2em; padding: .5em; color: #f2f2f2}
+.ico-youtube:before{ content: '\e774'; font-size: 2em; padding: .5em; color: #f2f2f2; }
+.ico-twiiter:before{ content: '\e937'; font-size: 2em; padding: .5em; color: #f2f2f2; }
 
 /*--- Definições Globais ---*/
 html, body {
@@ -57,6 +60,7 @@ a{ text-decoration: none;}
 }
 @media(min-width: 1200px){
 	/*--- Definições de font-size ---*/
+
 	/*ul, li, ol, i, a{ font-size: 1.5em; }*/
 	h1{ font-size: 6em; margin: 0;}
 	h2{ font-size: 4.5em; margin: 0;}
@@ -95,8 +99,8 @@ a{ text-decoration: none;}
 		width: 100%;
 		height: 100vh;
 		border-bottom: 4px solid rgba(72, 140, 126, .7);
-		-webkit-filter: sepia(100%);
-		filter: sepia(100%);
+/*		-webkit-filter: sepia(100%);
+		filter: sepia(100%);*/
 	}
 	header i#get-menu{
 		padding: .5em;
@@ -105,30 +109,71 @@ a{ text-decoration: none;}
 		right: 2%;
 		cursor: pointer;
 	}
+	header nav i#close-menu{
+		position: absolute;
+		top: 2%;
+		left: 29%;
+		transition: .8s ease-out;
+	}
+		#close-menu:hover{
+			transform: rotate(360deg)
+		}
 	/*--- Menu ---*/
-	header nav.main-menu {
-		background: rgba(255, 255, 255, .7);
+	header nav {
+		background: rgba(0, 0, 0, .9);
 		width: 20%;
-		height: 100%;
+		height: 70%;
 		position: absolute;
 		top: 0;
-		left: -20%;
+		left: 0;
 		z-index: 9;
-		transition: .5s gradient-linear;
+		transition: .8s ease-out;
 	}
+		.main-menu{
+			left: 0;
+		}
 	ul.menu{
 		width: 100%;
 		height: 100%;
 		margin-top: 20%;
-		margin-left: 5%;
 	}
-	.menu-item{
-		font-size: 2em;
+	/*Menu item*/
+	ul, li.menu-item{
+		width: 100%;
+		height: 3em;
+		text-align: center;
+		line-height: 48px;
+		position: relative;
+		overflow: hidden;
+		border-bottom: 3px solid rgba(0, 0, 0, 0);
+		transition: .8s ease-out;
+	}
+	li.menu-item:hover{
+		background: rgba(255,255,255, .1);
+		border-bottom: 3px solid rgba(255,255,255, 1);
+	}
+	.menu-item a{
+		font-size: 1.8em;
+		width: 100%;
+		height: 4em;
+		color: #fff;
 	}
 
+	/* Social Network */
+	ul.social-network{
+		width: 100%;
+		height: auto;
+		margin-top: 2%;
+	}
+	ul.social-network li{
+		display: inline-block;
+	}
+
+	/* Background Video*/
 	header div.bg-video{
 		width: 100%;
 		height: 100%;
+		top: -17%;
 		position: fixed;
 		overflow: hidden;
 		z-index: -1;
@@ -153,7 +198,7 @@ a{ text-decoration: none;}
 	header div.apr-text{
 		width: 100%;
 		height: auto;
-		margin-top: 5%;
+		padding-top: 15%;
 	}
 	/*--- Post Section ---*/
 	header div.posts-section{

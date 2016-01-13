@@ -38,6 +38,10 @@
 	</main>
 
 
+	<!-- Javascripts -->
+	<script type="text/javascript" src="http://localhost/mauricio/wp-content/themes/blackandwhite/js/jquery/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="http://localhost/mauricio/wp-content/themes/blackandwhite/js/events.js"></script>
+
 <!-- Corpo do site PS: a tag <body> já foi aberta no header -->
 
 <!-- Chamada da sidebar e footer -->
