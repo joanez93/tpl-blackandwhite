@@ -156,7 +156,7 @@ a{ text-decoration: none;}
 			background: rgba(192, 57, 43, .5);
 		}
 
-	header{
+	header.home-page{
 		background: rgba(25, 19, 124, .3);
 		width: 100%;
 		height: 100vh;
@@ -503,22 +503,76 @@ a{ text-decoration: none;}
 		border: 5px solid black;
 		margin: .5%;
 	}
-	div.comments{
-		background: #DAE2FF;
-	}
 
-	/* --------- Referente aos Comentários --------- */
-	article.comments-content{
+	/* --------- Comentários --------- */
+	section.comments-content{
+		background: rgba(255, 255, 255, .9);
 		width: 80%;
+		height: 50vh;
 		padding: 1% 10%;
 	}
+	section.comments-content a{
+		color: #8D99AE;
+	}
+
+	header.comments{
+		width: 100%;
+		height: 15%;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		margin-bottom: 1%;
+	}
+	.title-comments{
+		color: #2B2D42;
+		text-align: left;
+		padding: 1%;
+	}
+	.number-of-comments{
+		background: rgba(0, 0, 0, .4);
+		color: #fff;
+		border: 2px solid #8D99AE;
+		margin: 1%;
+		padding: .5%;
+	}
+
 	ul.comment-list{
 		width: 100%;
 		height: 100%;
 		display: block;
 		z-index: 99;
 	}
-
+	ul.comment-list div.comment-body{
+		float: left;
+		margin: 1%;
+		padding-right: 1%;
+	}
+	ul.comment-list img{
+		float: left;
+		margin-right: 1%;
+	}
+	ul.comment-list cite{
+		margin: 1%;
+	}
+	ul.comment-list div.commentmetadata{
+		width: 20%;
+		height: 10%;
+		float: right;
+	}
+		.commentmetadata:before{
+			content: '\e7e9';
+			display: block;
+			font-size: 2em;
+			color: #8D99AE;
+			text-align: center;
+		}
+	ul.comment-list p{
+		width: 70%;
+		margin-left: 7%;
+		padding: .5%;
+		font-size: 1em;
+	}
+	section.comments-content div.response{
+		display: none;
+	}
 	/*Footer*/
 	footer{
 		background: rgba(255, 255, 255, 1);

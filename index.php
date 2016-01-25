@@ -1,7 +1,7 @@
 <!--Código do corpo do site -->
 	<!-- Chamada do header -->
 	<?php get_header(); ?>
-	<header>
+	<header class="home-page">
 		<!-- Background -->
 		<div class="bg-video">
 			<video autoplay loop muted>

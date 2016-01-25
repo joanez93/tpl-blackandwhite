@@ -8,8 +8,11 @@
 	return;
 	}
 ?>
-<article class="comments-content">
-	<h4 class="page-title"><?php comments_number('0 Comentários', '1 Comentário', '% Comentários'); ?></h4>
+<section class="comments-content">
+	<header class="comments">
+		<h4 class="title-comments">Comentários<span class="number-of-comments"><?php comments_number('0', '1', '%'); ?></span></h4>
+		
+	</header>
 
 	<!-- Se tiver comentários -->
 	<?php if ( have_comments() ) : ?>
@@ -72,4 +75,4 @@
 	<?php else : ?>
 		<h3>Comentários não permitidos.</h3>
 	<?php endif; ?>
-</article>
+</section>
