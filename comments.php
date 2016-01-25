@@ -8,16 +8,16 @@
 	return;
 	}
 ?>
-<article class="comments">
-	<h3><?php comments_number('0 Comentários', '1 Comentário', '% Comentários'); ?></h3>
+<article class="comments-content">
+	<h4 class="page-title"><?php comments_number('0 Comentários', '1 Comentário', '% Comentários'); ?></h4>
 
 	<!-- Se tiver comentários -->
 	<?php if ( have_comments() ) : ?>
 
 	<!-- Lista de comentários -->
-	<ol class="comment-list">
+	<ul class="comment-list">
 		<?php wp_list_comments('avatar_size=64&type=comment'); ?>
-	</ol>
+	</ul>
 
 	<!-- se houver paginação -->
 	<?php if($wp_query->max_num_pages > 1) : ?>	
@@ -32,7 +32,7 @@
 
 	<?php endif; ?>
 
-	<!-- Comentar -->
+	<!-- Adicionar Comentario -->
 	<?php if( comments_open() ) : ?>
 		<div class="response">
 			<h3>Deixe o seu comentário!</h3>

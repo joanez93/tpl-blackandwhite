@@ -1,0 +1,9 @@
+/*Home*/
+@keyframes efect_down{
+	from{
+		bottom: 4%;
+	}
+	to{
+		bottom: 2%;
+	}
+}
